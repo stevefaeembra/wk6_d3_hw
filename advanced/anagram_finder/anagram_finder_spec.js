@@ -49,7 +49,7 @@ describe('AnagramFinder', function () {
     assert.deepStrictEqual(anagramFinder.findAnagrams(['javascript']), []);
   });
 
-  xit('should not detect an empty string as an anagram', function () {
+  it('should not detect an empty string as an anagram', function () {
     const anagramFinder = new AnagramFinder('word');
     assert.deepStrictEqual(anagramFinder.findAnagrams(['']), []);
   });
