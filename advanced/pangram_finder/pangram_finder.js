@@ -1,25 +1,21 @@
 const PangramFinder = function (phrase) {
   this.alphabet = 'qwertyuiopasdfghjklzxcvbnm'.split('');
   // copy only letters to this.phrase
+  phrase = phrase.toLowerCase();
   const phrase_array = phrase.split('');
   const just_letters = phrase_array.filter((letter) => {
     return this.alphabet.lastIndexOf(letter) != -1;
   });
-  console.log(`Just letters: ${just_letters}`);
   // smoosh into a string so I can reuse code from anagram :)
   this.phrase = just_letters.join('');
-  console.log(`this.phrase = ${ this.phrase }`);
-}
+};
 
 PangramFinder.prototype.isPangram = function () {
-  console.log(`Sort Letters: ${ this.sortLetters(this.phrase)}`);
-  console.log(`Sort Alphabet: ${ this.sortLetters(this.alphabet.join(''))}`);
-
   return this.arraysIdentical(
     this.sortLettersAndStripDuplicates(this.phrase),
     this.sortLettersAndStripDuplicates(this.alphabet.join(''))
   )
-}
+};
 
 PangramFinder.prototype.sortLettersAndStripDuplicates = function (word) {
   // oops, i seem to confused pangrams with omnigrams

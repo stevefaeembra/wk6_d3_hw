@@ -20,12 +20,12 @@ describe('PangramFinder', function () {
     assert.strictEqual(pangramFinder.isPangram(), false);
   });
 
-  xit('should be able to detect a pangram with mixed case', function () {
+  it('should be able to detect a pangram with mixed case', function () {
     const pangramFinder = new PangramFinder('The FIVE boxinG WiZaRdS JUMP quickly');
     assert.strictEqual(pangramFinder.isPangram(), true);
   });
 
-  xit('should be able to detect a non-pangram with mixed case', function () {
+  it('should be able to detect a non-pangram with mixed case', function () {
     const pangramFinder = new PangramFinder('');
     assert.strictEqual(pangramFinder.isPangram(), false);
   });
