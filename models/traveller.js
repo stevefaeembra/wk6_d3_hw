@@ -32,7 +32,22 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
 };
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
+  // find a list of unique modes of transport
+  // use a reducer which builds up an array accumulator the name of any modes of transport
+  // we only add a mode of transport if we haven't seen it
+  // before.
 
+  const reducer =  (acc, item) => {
+    console.log(`acc is ${acc}`); // which is 1!!!?
+    if (!acc.includes(item.transport)) {
+      // not in so append
+      acc.push(item.transport);
+    }
+    // pass back acc unchanged
+    return acc;
+  };
+  let acc=[];
+  return this.journeys.reduce(reducer, acc);
 };
 
 
