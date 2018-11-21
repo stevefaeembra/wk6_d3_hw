@@ -25,7 +25,7 @@ AnagramFinder.prototype.sortLetters = function (word) {
 
 AnagramFinder.prototype.findAnagrams = function (otherWords) {
   return otherWords.filter((word) => {
-    return this.arraysIdentical(this.sortLetters(word), this.sortLetters(this.word));
+    return this.arraysIdentical(this.sortLetters(word.toLowerCase()), this.sortLetters(this.word.toLowerCase()));
   })
 }
 
