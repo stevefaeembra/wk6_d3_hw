@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha specs"
+    "test": "mocha specs",
+    "test_anagram": "mocha ./advanced/anagram_finder/anagram_finder_spec"
   },
   "keywords": [],
   "author": "",
