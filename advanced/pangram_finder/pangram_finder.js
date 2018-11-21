@@ -16,8 +16,8 @@ PangramFinder.prototype.isPangram = function () {
   console.log(`Sort Alphabet: ${ this.sortLetters(this.alphabet.join(''))}`);
 
   return this.arraysIdentical(
-    this.sortLetters(this.phrase),
-    this.sortLetters(this.alphabet.join(''))
+    this.sortLettersAndStripDuplicates(this.phrase),
+    this.sortLettersAndStripDuplicates(this.alphabet.join(''))
   )
 }
 

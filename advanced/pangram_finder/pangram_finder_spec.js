@@ -10,12 +10,12 @@ describe('PangramFinder', function () {
     assert.deepStrictEqual(actual, expected);
   });
 
-  xit('should be able to detect a pangram', function () {
+  it('should be able to detect a pangram', function () {
     const pangramFinder = new PangramFinder('the quick brown fox jumps over the lazy dog');
     assert.strictEqual(pangramFinder.isPangram(), true);
   });
 
-  xit('should be able to detect a non-pangram', function () {
+  it('should be able to detect a non-pangram', function () {
     const pangramFinder = new PangramFinder('this is not a pangram');
     assert.strictEqual(pangramFinder.isPangram(), false);
   });
